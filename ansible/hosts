@@ -1,0 +1,2 @@
+[master]
+ubuntu@13.235.128.137 ansible_user=ubuntu ansible_ssh_private_key_file=/home/vikas/AWServer3-key.pem  ansible_python_interpreter=/usr/bin/python3

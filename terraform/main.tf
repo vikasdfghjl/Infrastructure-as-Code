@@ -78,6 +78,8 @@ resource "aws_instance" "webserver1" {
     vpc_security_group_ids = [aws_security_group.webSg.id]
     subnet_id = aws_subnet.sub1.id
     user_data = base64encode(file("userdata.sh"))
+    key_name = "${var.ami_key_pair_name}"
+
 
     tags = {
         Name = "Webserver1"
@@ -90,6 +92,7 @@ resource "aws_instance" "webserver2" {
     vpc_security_group_ids = [aws_security_group.webSg.id]
     subnet_id = aws_subnet.sub2.id
     user_data = base64encode(file("userdata.sh"))
+    key_name = "${var.ami_key_pair_name}"
 
     tags = {
         Name = "Webserver2"
